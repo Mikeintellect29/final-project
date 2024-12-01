@@ -1,0 +1,46 @@
+.profile-container {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.profile-info {
+  margin: 20px 0;
+}
+
+.profile-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+button {
+  padding: 10px;
+  margin-top: 10px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+.edit-form {
+  display: none;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.edit-form input,
+.edit-form button {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+}
+
+button#cancelEdit {
+  background-color: #f44336;
+}

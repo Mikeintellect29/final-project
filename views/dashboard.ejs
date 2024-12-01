@@ -1,0 +1,92 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="patient.css" />
+  </head>
+  <body>
+    <!--dashboard-->
+
+    <nav>
+      <!--Hamburger menu checkbox-->
+      <input type="checkbox" name="" id="menu-toggle" />
+      <label for="menu-toggle" class="menu-icon">&#9776;</label>
+
+      <!--Navigation bar-->
+      <ul class="sidebar">
+        <li><a href="/dashboard">Home</a></li>
+        <li><a href="/profile">Profile Management</a></li>
+        <li><a href="/appointment">Appointment Management</a></li>
+        <li><a href="/find-doctor">Find Doctor</a></li>
+        <li><a href="/logout" id="/logout">Logout</a></li>
+      </ul>
+    </nav>
+    <main>
+      <section class="content">
+        <div class="main-content">
+          <div class="text-content">
+            <h1>Fully Medicine Solution for You</h1>
+            <p class="sen">
+              The ultimate telemedicine solution, providing you with holistic
+              and uninterrupted healthcare, whether it’s virtual consultations,
+              prescription refills, or instant health updates—all designed to
+              keep you in control of your well-being
+            </p>
+            <button onclick="location.href='appointment-view.html'"">
+              Get Started
+            </button>
+          </div>
+          <div class="image-content">
+            <img
+              src="/image/pexels-shkrabaanthony-5215024.jpg"
+              alt="doctor providing telemed consultation"
+              width="400"
+              height="400"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="service">
+        <div class="service-item">
+          <div class="service-image">
+            <img
+              src="/image/pexels-karolina-grabowska-7195320.jpg"
+              alt="find doctor"
+              width="400"
+              height="500"
+            />
+          </div>
+
+          <div class="service-text">
+            <h2><a href="/find-doctor">Find Doctor </a></h2>
+            <p>
+              Find the right doctor who understands your needs and start your
+              journey to better health today.
+            </p>
+          </div>
+        </div>
+
+        <div class="service-item">
+          <div class="service-text">
+            <h2><a href="/appointment"> Book Appointment</a></h2>
+            <p>
+              Your health matters. Book your appointment effortlessly and get
+              connected with a healthcare professional
+            </p>
+          </div>
+          <div class="service-image">
+            <img
+              src="/image/pexels-karolina-grabowska-7195320.jpg"
+              alt="book appointment witha doctor"
+              width="400"
+              height="500"
+            />
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="/patient.js"></script>
+  </body>
+</html>

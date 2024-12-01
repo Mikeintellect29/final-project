@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Page</title>
+    <link rel="stylesheet" href="/registration.css" />
+    <!-- Link your CSS if needed -->
+  </head>
+  <body>
+    <div class="form-container">
+      <h2>Registration form</h2>
+      <form id="registrationForm" action="" method="post">
+        <div class="input-box">
+          <label for="firstName">first_Name:</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            placeholder=" first Name"
+          />
+        </div>
+        <span id="nameError" class="error"></span>
+
+        <div class="input-box">
+          <label for="lastName">last_Name:</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            placeholder="last Name"
+          />
+        </div>
+        <span id="lastError" class="error"></span>
+
+        <div class="input-box">
+          <label for="country">Country:</label>
+          <!-- Only African countries listed -->
+          <select id="country" name="country">
+            <option value="" disabled selected>Select your country</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="South Africa">South Africa</option>
+            <option value="Egypt">Egypt</option>
+            <option value="Kenya">Kenya</option>
+            <option value="Ethiopia">Ethiopia</option>
+            <option value="Ghana">Ghana</option>
+            <option value="Morocco">Morocco</option>
+            <option value="Uganda">Uganda</option>
+            <option value="Tanzania">Tanzania</option>
+            <option value="Algeria">Algeria</option>
+            <option value="Angola">Angola</option>
+            <option value="Ivory Coast">Ivory Coast</option>
+            <option value="Sudan">Sudan</option>
+            <option value="Cameroon">Cameroon</option>
+            <option value="Zimbabwe">Zimbabwe</option>
+            <option value="Senegal">Senegal</option>
+            <option value="Rwanda">Rwanda</option>
+            <option value="Botswana">Botswana</option>
+          </select>
+        </div>
+        <span id="countryError" class="error"></span>
+
+        <div class="input-box">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="Enter your email"
+          />
+        </div>
+        <span id="emailError" class="error"></span>
+
+        <div class="input-box">
+          <label for="gender">Gender:</label>
+          <select name="gender" id="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <span id="genderError" class="error"></span>
+
+        <div class="input-box">
+          <label for="age">DOB:</label>
+
+          <input type="date" id="dob" name="age" placeholder="DOB" />
+        </div>
+        <span id="dobError" class="error"></span>
+
+        <div class="input-box">
+          <label for="phone number">Phone Nos:</label>
+          <input type="tel" name="number" id="phone" />
+        </div>
+        <span id="phoneError" class="error"></span>
+
+        <div class="input-box">
+          <label for="address">Address: </label>
+          <textarea name="address" id="address"></textarea>
+        </div>
+        <span id="addressError" class="error"></span>
+
+        <div class="input-box">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            name="password"
+            placeholder="Enter your password"
+          />
+        </div>
+        <span id="passwordError" class="error"></span>
+
+        <div class="input-box">
+          <label for="confirmPassword">Confirm Password:</label>
+          <input
+            type="password"
+            id="confirmPassword"
+            name="confirmPassword"
+            placeholder="Confirm your password"
+          />
+        </div>
+        <span id="confirmPasswordError" class="error"></span>
+
+        <div>
+          <label for=""
+            ><input type="checkbox" id="terms" /> I agree with the
+            <a href="/terms">terms of use</a>
+          </label>
+        </div>
+        <span id="termsError" class="error"></span>
+
+        <div class="input-box">
+          <input type="submit" value="Register" />
+        </div>
+
+        <p>Already have an account? <a href="/doc-login">Login here</a></p>
+        <div id="registerError" class="error"></div>
+      </form>
+    </div>
+
+    <!-- Section to display form summary -->
+    <div id="formSummary" class="form-summary" style="display: none">
+      <h2>Form Summary</h2>
+      <p id="summaryText"></p>
+    </div>
+
+    <!-- Link to my JavaScript file -->
+    <script src="/register.js"></script>
+  </body>
+</html>

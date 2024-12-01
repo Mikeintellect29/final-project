@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doctor Dashboard</title>
+    <link rel="stylesheet" href="doc-dasboard.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Doctor Dashboard</h1>
+      <nav class="nav">
+        <a href="/dashboard">Home</a>
+        <a href="/appointment">Appointments</a>
+        <a href="#">Patient History</a>
+        <a href="/doc-profile">Profile</a>
+        <a href="/logout">Logout</a>
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <!-- Dashboard Overview -->
+      <section class="overview">
+        <h2>Welcome, Dr. [Name]</h2>
+        <p>Your schedule for today:</p>
+        <ul class="appointments-list">
+          <li>
+            <strong>9:00 AM - 9:30 AM</strong> - Consultation with John Doe
+            <button class="start-btn">Start</button>
+          </li>
+          <li>
+            <strong>10:00 AM - 10:30 AM</strong> - Consultation with Jane Smith
+            <button class="start-btn">Start</button>
+          </li>
+          <!-- More appointments -->
+        </ul>
+      </section>
+
+      <!-- Appointment Management -->
+      <section class="appointments-section">
+        <h3>Upcoming Appointments</h3>
+        <div class="appointment-card">
+          <p><strong>Patient:</strong> Mark Johnson</p>
+          <p><strong>Time:</strong> 11:00 AM - 11:30 AM</p>
+          <p><strong>Status:</strong> Scheduled</p>
+          <button class="view-details-btn">View Details</button>
+        </div>
+        <!-- More appointment cards -->
+      </section>
+
+      <!-- Patient History -->
+      <section class="patient-history-section">
+        <h3>Patient History</h3>
+        <div class="patient-card">
+          <p><strong>Name:</strong> Emily Carter</p>
+          <p><strong>Last Consultation:</strong> March 10, 2024</p>
+          <button class="view-records-btn">View Records</button>
+        </div>
+        <!-- More patient cards -->
+      </section>
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2024 Telemedicine Platform. All Rights Reserved.</p>
+    </footer>
+  </body>
+</html>

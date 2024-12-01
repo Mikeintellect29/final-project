@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Appointment Management</title>
+    <link rel="stylesheet" href="/appointment.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Manage Appointments</h2>
+
+      <!-- Appointment List Section -->
+      <div class="appointment-list">
+        <h3>Upcoming Appointments</h3>
+        <div id="appointments"></div>
+      </div>
+
+      <!-- Appointment Form for Booking or Rescheduling -->
+      <div class="appointment-form">
+        <h3>Book or Reschedule an Appointment</h3>
+        <form id="appointmentForm">
+          <input type="hidden" id="appointmentId" value="" />
+
+          <div class="form-group">
+            <label for="doctor">Doctor </label>
+            <!-- Dropdown for selecting a doctor -->
+            <select id="doctor" required>
+              <!-- Add more options dynamically from backend if needed -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="date">Appointment Date</label>
+            <input type="date" id="date" required />
+          </div>
+
+          <div class="form-group">
+            <label for="time">Appointment Time</label>
+            <input type="time" id="time" required />
+          </div>
+
+          <!-- Hidden input for patient_id (you can set this based on logged-in user) -->
+          <input
+            type="hidden"
+            id="patient_id"
+            name="patient_id"
+            value="12345"
+          />
+          <!-- Example: set dynamically -->
+
+          <!-- Hidden input for status (optional, set to 'scheduled') -->
+          <input type="hidden" id="status" name="status" value="scheduled" />
+
+          <button type="button" class="submit" onclick="submitAppointment()">
+            Save Appointment
+          </button>
+        </form>
+      </div>
+
+      <p class="message success" id="success-message" style="display: none">
+        Appointment saved successfully!
+      </p>
+      <p class="message error" id="error-message" style="display: none">
+        Failed to save the appointment.
+      </p>
+    </div>
+
+    <script>
+      // Set patient_id dynamically (example: from localStorage or backend)
+      document.addEventListener("DOMContentLoaded", function () {
+        const patientId = localStorage.getItem("patient_id") || "12345"; // Fallback for testing
+        document.getElementById("patient_id").value = patientId;
+      });
+    </script>
+    <script src="/appointment.js"></script>
+  </body>
+</html>

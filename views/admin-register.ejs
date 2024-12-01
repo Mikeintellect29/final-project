@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/admin.css" />
+    <title>Admin Registration</title>
+  </head>
+  <body>
+    <div class="admin-container">
+      <h1>Admin Registration</h1>
+      <form id="admin-register-form">
+        <label for="username">Username</label>
+        <input type="text" id="username" name="username" required />
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required />
+
+        <label for="role">Role</label>
+        <select id="role" name="role">
+          <option value="admin">Admin</option>
+          <option value="super_admin">Super Admin</option>
+        </select>
+
+        <button type="submit">Register</button>
+      </form>
+      <div id="register-message"></div>
+    </div>
+    <script src="/admin.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Find Doctor</title>
+    <link rel="stylesheet" href="/find-doctor.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Find a Doctor</h2>
+      <form id="searchForm">
+        <input
+          type="text"
+          id="specialty"
+          placeholder="Enter specialty (e.g., Cardiologist)"
+        />
+        <input
+          type="text"
+          id="location"
+          placeholder="Enter location (e.g., Lagos)"
+        />
+        <button type="submit">Search</button>
+      </form>
+      <div id="doctorList" class="doctor-list"></div>
+    </div>
+
+    <script src="/find-doctor.js"></script>
+  </body>
+</html>

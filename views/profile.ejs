@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patient Profile</title>
+    <link rel="stylesheet" href="/profile.css" />
+  </head>
+  <body>
+    <div class="profile-container">
+      <h1>Patient Profile</h1>
+
+      <!-- Patient Info -->
+      <div class="profile-info">
+        <img
+          src="<%= patient.profilePic ? patient.profilePic : '/public/image/pexels-alex-green-5699475.jpg' %>"
+          alt="Profile Picture"
+          class="profile-img"
+        />
+        <h2><%= patient.firs_tName %> <%= patient.last_Name %></h2>
+        <p><strong>Email:</strong> <%= patient.email %></p>
+        <p><strong>Phone:</strong> <%= patient.phone %></p>
+        <p><strong>Address:</strong> <%= patient.address %></p>
+        <p><strong>Date_of_Birth:</strong> <%= patient.dob %></p>
+        <button id="editProfileBtn">Edit Profile</button>
+      </div>
+
+      <!-- Edit Profile Form (Hidden by default) -->
+      <div id="editProfileForm" class="edit-form">
+        <form id="updateProfileForm" enctype="multipart/form-data">
+          <label for="firstName">First Name:</label>
+          <input
+            type="text"
+            id="firstName"
+            name="firstName"
+            value="<%= patient.firstName %>"
+            required
+          />
+
+          <label for="lastName">Last Name:</label>
+          <input
+            type="text"
+            id="lastName"
+            name="lastName"
+            value="<%= patient.lastName %>"
+            required
+          />
+
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value="<%= patient.email %>"
+            required
+          />
+
+          <label for="phone">Phone:</label>
+          <input
+            type="text"
+            id="phone"
+            name="phone"
+            value="<%= patient.phone %>"
+          />
+
+          <label for="address">Address:</label>
+          <input
+            type="text"
+            id="address"
+            name="address"
+            value="<%= patient.address %>"
+          />
+
+          <label for="dob">Date of Birth:</label>
+          <input type="date" id="dob" name="dob" value="<%= patient.dob %>" />
+
+          <label for="profilePic">Profile Picture:</label>
+          <input type="file" id="profilePic" name="profilePic" />
+
+          <button type="submit">Save Changes</button>
+          <button type="button" id="cancelEdit">Cancel</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="/profile.js"></script>
+  </body>
+</html>

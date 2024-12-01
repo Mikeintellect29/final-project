@@ -1,0 +1,68 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  background: url(/image/pexels-cottonbro-7578808.jpg) no-repeat center
+    center/cover;
+
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  width: 50%px;
+  background-position: center top;
+  background-size: cover;
+  overflow: hidden;
+}
+.error {
+  color: red;
+  margin: 0, 0, 10px, 0;
+}
+.form {
+  background: rgba(255, 255, 255, 0.8);
+  color: black;
+  width: 500px;
+  margin-top: 350px;
+  padding: 10px;
+  border-radius: 10px;
+}
+.form h1 {
+  font-size: x-large;
+  text-align: center;
+  color: black;
+}
+.form .input-box {
+  margin: auto;
+  width: 100%;
+  height: 50px;
+}
+.input-box input {
+  width: 90%;
+  border-radius: 40px;
+}
+.form .Remember {
+  justify-content: space-between;
+  display: flex;
+  font-size: large;
+}
+.Remember a:hover {
+  text-decoration: overline;
+}
+.form .login {
+  margin: auto;
+  width: 90%;
+  height: 50px;
+  border-radius: 40px;
+  cursor: pointer;
+  color: blue;
+}
+
+.form .register {
+  margin-top: 5%;
+  text-align: center;
+}
+header h1 {
+  vertical-align: top;
+}

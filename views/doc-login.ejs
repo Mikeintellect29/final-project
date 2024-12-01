@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Telemedicine App</title>
+    <link rel="stylesheet" href="/login.css" />
+  </head>
+  <body>
+    <div class="form">
+      <form action="doc" method="get" id="loginForm">
+        <h1>Login</h1>
+        <div class="input-box">
+          <!-- <label for="user">Username</label> -->
+          <input type="email" name="email" id="email" placeholder="email" />
+        </div>
+
+        <span id="nameError" class="error"></span>
+
+        <div class="input-box">
+          <!--<label for="passkey">Password</label> -->
+          <input
+            type="password"
+            name="password"
+            id="password"
+            placeholder="password"
+          />
+        </div>
+
+        <span id="passwordError" class="error"></span>
+
+        <div class="Remember">
+          <label for=""><input type="checkbox" /> Remember me</label>
+          <a href="https://Forget_password.com">Forget Password</a>
+        </div>
+
+        <input type="submit" value="Login" class="login" id="loginButton" />
+
+        <div class="register" id="message">
+          <p>Don't have an account? <a href="/doc-register">Register</a></p>
+        </div>
+        <div id="loginErorr" class="error"></div>
+      </form>
+    </div>
+    <script src="/doc-login.js"></script>
+  </body>
+</html>
