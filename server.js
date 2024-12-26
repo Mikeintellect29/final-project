@@ -61,6 +61,11 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: "Internal Server Error" });
 });
 
+app.use((err, req, res, next) => {
+  console.error("Unhandled error:", err.stack); // Log stack trace for unhandled errors
+  res.status(500).json({ message: "An unexpected error occurred" });
+});
+
 // // Default Route
 // app.get("/", (req, res) => {
 //   res.send("Welcome to the Telemedicine API");
@@ -130,6 +135,14 @@ app.get("/doc-register", (req, res) => {
 
 app.get("/doc-dashboard", (req, res) => {
   res.render("doc-dashboard");
+});
+
+app.get("/doc-appointment", (req, res) => {
+  res.render("doc-appointment");
+});
+
+app.get("/doc-patient-history", (req, res) => {
+  res.render("doc-patient-history");
 });
 
 app.get("/doc-profile", (req, res) => {

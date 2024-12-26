@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   loadProfile();
+  updateDashboardWelcome(); // Add this function for the dashboard greeting
 });
 
 function loadProfile() {
@@ -8,7 +9,7 @@ function loadProfile() {
 
   if (!token) {
     console.error("No token found. User might not be authenticated.");
-    window.location.href = "/login";
+    window.location.href = "/doc-login";
     // Optionally redirect to login or show an error
     return;
   }
